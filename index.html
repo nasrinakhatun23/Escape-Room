@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Room Escape</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Escape the Magic Room</h1>
+  <p>You're trapped! Solve both puzzles to break the magical seal.</p>
+  <p id="timer" class="timer-text">Time: 0 seconds</p>
+  <p id="stopTime" class="stop-text"></p>
+
+
+  <div id="puzzle1" class="puzzle">
+    <h2>Puzzle 1: The Magic Door Color</h2>
+    <label>Guess the color of the magic door:</label><br>
+    <input type="text" id="colorGuess" placeholder="Type a color like red, green..." />
+    <button onclick="checkColor()">Submit</button>
+    <p id="colorMsg"></p>
+  </div>
+
+   <div id="puzzle3" class="puzzle hidden">
+  <h2>Puzzle 3: Element Riddle</h2>
+  <p>🔥 💧 🌬️ — Which element defeats all three?</p>
+  <input type="text" id="logicGuess" />
+  <button onclick="checkLogic()">Submit</button>
+  <p id="logicMsg"></p>
+</div>
+
+  <div id="puzzle2" class="puzzle hidden">
+    <h2>Puzzle 2: Number Pattern</h2>
+    <p>What comes next in the pattern: 2, 4, 8, 16, ?</p>
+    <input type="number" id="numberGuess" />
+    <button onclick="checkPattern()">Submit</button>
+    <p id="patternMsg"></p>
+  </div>
+
+
+  <div id="winMessage" class="hidden">
+    <h2> You Escaped!</h2>
+    <p>Congratulations! The magic door opens, and you're free.</p>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
